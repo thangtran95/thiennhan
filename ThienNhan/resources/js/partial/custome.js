@@ -1,6 +1,5 @@
-$(document).ready(function(){
-
-    $(".filter-button").click(function(){
+    $(".filter-button").on('click',function(){
+        console.log('áđá123');
         var value = $(this).attr('data-filter');
         
         if(value == "all")
@@ -16,6 +15,7 @@ $(document).ready(function(){
             $('.filter').filter('.'+value).show('3000');
             
         }
+        $('.filter-button').removeClass('active');
+        $(this).addClass('active');
     });
 
-});
